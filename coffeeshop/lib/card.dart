@@ -15,7 +15,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Container(margin: EdgeInsets.all(10),
       decoration: BoxDecoration(
           color: Color.fromARGB(255, 31, 37, 44),
           borderRadius: BorderRadius.circular(20)),

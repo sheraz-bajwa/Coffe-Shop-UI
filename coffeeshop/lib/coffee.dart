@@ -89,15 +89,36 @@ class Coffee extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                    child: Row(
-                      children: [
-                        Home(
-                          dess: '',
-                          img: '',
-                          name: '',
-                          price: '',
-                        ),
-                      ],
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          Home(
+                            dess: '',
+                            img: '',
+                            name: '',
+                            price: '',
+                          ),
+                          Home(
+                            dess: '',
+                            img: '',
+                            name: '',
+                            price: '',
+                          ),
+                          Home(
+                            dess: '',
+                            img: '',
+                            name: '',
+                            price: '',
+                          ),
+                          Home(
+                            dess: '',
+                            img: '',
+                            name: '',
+                            price: '',
+                          ),
+                        ],
+                      ),
                     ),
                   )
                 ],
