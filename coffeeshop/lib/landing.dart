@@ -104,17 +104,11 @@ class _LandingState extends State<Landing> with TickerProviderStateMixin {
                                     letterSpacing: 2,
                                     fontSize: 40),
                               ),
-                              Text(snapshot.data!.number.toString())
+                              
                             ],
                           );
                         } else {
-                          return Center(
-                            child: SpinKitSpinningLines(
-                              color: Colors.amberAccent,
-                              size: 50,
-                              controller: _controller,
-                            ),
-                          );
+                          return Center(child: Text('Error'));
                         }
                       }),
                 ],

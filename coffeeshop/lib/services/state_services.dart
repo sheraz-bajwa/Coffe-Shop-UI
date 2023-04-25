@@ -8,12 +8,13 @@ class Weatherservices {
     //final response = await http.get(Uri.parse(AppUrl.Lahore));
     final queryParameter = {
       'query': recipyee,
-      'appKey': 'f509ec1115a4477aaac076a02d5e3ec0',
+      'apiKey': 'f509ec1115a4477aaac076a02d5e3ec0',
     };
     final uri = Uri.https(
-      'https://api.spoonacular.com/food/products/search?query=biryani&apiKey=f509ec1115a4477aaac076a02d5e3ec0'
-      //'https://api.spoonacular.com','/food/products/search',queryParameter
-       );
+        //'https://api.spoonacular.com/food/products/search?query=biryani&apiKey=f509ec1115a4477aaac076a02d5e3ec0'
+        'https://api.spoonacular.com',
+        '/food/products/search',
+        queryParameter);
     final response = await http.get(uri);
     if (response.statusCode == 200) {
       var data1 = jsonDecode(response.body);
@@ -21,6 +22,28 @@ class Weatherservices {
       return recipy.fromJson(data1);
     } else {
       throw Exception('Error');
+    }
+  }
+
+  Future<List<dynamic>> CountriesRecord(String recipyee) async {
+    var data;
+
+    final queryParameter = {
+      'query': recipyee,
+      'apiKey': 'f509ec1115a4477aaac076a02d5e3ec0',
+    };
+    final uri = Uri.https(
+        //'https://api.spoonacular.com/food/products/search?query=biryani&apiKey=f509ec1115a4477aaac076a02d5e3ec0'
+        'https://api.spoonacular.com',
+        '/food/products/search',
+        queryParameter);
+    final response = await http.get(uri);
+    if (response.statusCode == 200) {
+      data = jsonDecode(response.body);
+
+      return data;
+    } else {
+      throw Exception('Error loding filr');
     }
   }
 }

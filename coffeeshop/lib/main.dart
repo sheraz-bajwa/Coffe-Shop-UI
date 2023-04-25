@@ -1,5 +1,6 @@
 import 'package:coffeeshop/coffee.dart';
 import 'package:coffeeshop/landing.dart';
+import 'package:coffeeshop/liist.dart';
 import 'package:flutter/material.dart';
 import 'package:coffeeshop/card.dart';
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Landing(),
+      home: Countries_wise_Cases(),
     );
   }
 }
