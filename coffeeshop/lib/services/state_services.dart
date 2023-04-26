@@ -25,6 +25,22 @@ class Weatherservices {
     }
   }
 
+  Future<List<dynamic>> CountriesRecord1(String recipyee) async {
+    var data;
+
+    final uri = Uri.https(
+        'https://api.spoonacular.com/food/products/search?query=biryani&apiKey=f509ec1115a4477aaac076a02d5e3ec0');
+    final response = await http.get(uri);
+    if (response.statusCode == 200) {
+      data = jsonDecode(response.body);
+
+      return data;
+    } else {
+      throw Exception('Error loding filr');
+    }
+  }
+
+
   Future<List<dynamic>> CountriesRecord(String recipyee) async {
     var data;
 
