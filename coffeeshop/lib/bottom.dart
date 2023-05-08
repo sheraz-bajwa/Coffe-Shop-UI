@@ -10,7 +10,11 @@ class MySta extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      backgroundColor: Colors.transparent,
+      selectedItemColor: Colors.white,
+      showUnselectedLabels: true,
+      unselectedLabelStyle: TextStyle(color: Colors.white),
+      unselectedItemColor: Colors.white,
+      backgroundColor: Color.fromARGB(255, 0, 0, 0),
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(
@@ -21,10 +25,17 @@ class MySta extends StatelessWidget {
         ),
         BottomNavigationBarItem(
           icon: Icon(
-            Icons.open_in_new_rounded,
+            Icons.explore,
             color: Colors.white,
           ),
-          label: 'Open Dialog',
+          label: 'Explore',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(
+            Icons.chat_bubble_outline,
+            color: Colors.white,
+          ),
+          label: 'Chat',
         ),
       ],
     );

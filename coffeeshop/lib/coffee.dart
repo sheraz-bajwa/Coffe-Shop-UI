@@ -12,6 +12,8 @@ class Coffee extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -36,100 +38,155 @@ class Coffee extends StatelessWidget {
                 //Icon(Icons.menu_book_outlined),
               ],
             ),
-            Container(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start,
+            Text(
+              'Find the best',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w900,
+                  fontSize: 40),
+            ),
+            Text(
+              'Coffee for you',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w900,
+                  fontSize: 40),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            TextFormField(
+              style: TextStyle(color: Colors.white),
+              //keyboardType: TextInputType.text,
+
+              decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.search),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  hintText: 'Search...',
+                  hintStyle: TextStyle(color: Colors.white),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    //borderSide: BorderSide(color: Colors.white)
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    //borderSide: BorderSide(color: Colors.grey.shade400)
+                  ),
+                  fillColor: Color.fromARGB(255, 31, 37, 44),
+                  filled: true),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Enter text';
+                }
+                return null;
+              },
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
                 children: [
-                  // Container(
-                  //   child: Column(
-                  //     children: [
-
-                  //     ],
-                  //   ),
-                  // ),
                   Text(
-                    'Find the best',
+                    'Capuccino',
                     style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w900,
-                        fontSize: 40),
+                        color: Color.fromARGB(255, 198, 127, 81),
+                        fontWeight: FontWeight.w400,
+                        fontSize: 20),
                   ),
-                  Text(
-                    'Coffee for you',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w900,
-                        fontSize: 40),
+                  SizedBox(
+                    width: 20,
                   ),
-                  TextFormField(
-                    style: TextStyle(color: Colors.white),
-                    //keyboardType: TextInputType.text,
-
-                    decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.search),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(50)),
-                        hintText: 'Search...',
-                        hintStyle: TextStyle(color: Colors.white),
-                        enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(50),
-                            borderSide: BorderSide(color: Colors.white)),
-                        focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(50),
-                            borderSide:
-                                BorderSide(color: Colors.grey.shade400)),
-                        //fillColor: Colors.grey.shade200,
-                        filled: true),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Enter text';
-                      }
-                      return null;
-                    },
+                  Text('Espresso',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 80, 86, 94),
+                          fontWeight: FontWeight.w400,
+                          fontSize: 20)),
+                  SizedBox(
+                    width: 20,
                   ),
-                  ListView(),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: [
-                          Home(
-                            dess: 'with plane sugar',
-                            img: 'assets/cofe.jpg',
-                            name: 'Capucino',
-                            price: 'RP 20,000',
-                          ),
-                          Home(
-                            dess: '',
-                            img: '',
-                            name: '',
-                            price: '',
-                          ),
-                          Home(
-                            dess: '',
-                            img: '',
-                            name: '',
-                            price: '',
-                          ),
-                          Home(
-                            dess: '',
-                            img: '',
-                            name: '',
-                            price: '',
-                          ),
-                        ],
-                      ),
-                    ),
+                  Text('latte',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 80, 86, 94),
+                          fontWeight: FontWeight.w400,
+                          fontSize: 20)),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text('American',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 80, 86, 94),
+                          fontWeight: FontWeight.w400,
+                          fontSize: 20)),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text('Plane',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 80, 86, 94),
+                          fontWeight: FontWeight.w400,
+                          fontSize: 20)),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text('turkish',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 80, 86, 94),
+                          fontWeight: FontWeight.w400,
+                          fontSize: 20)),
+                  SizedBox(
+                    width: 20,
                   )
                 ],
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Home(
+                      dess: 'with plane sugar',
+                      img: 'assets/cofe.jpg',
+                      name: 'Capucino',
+                      price: 'RP 20,00',
+                    ),
+                    Home(
+                      dess: 'with fresh milk',
+                      img: 'assets/espresso.jpg',
+                      name: 'Espresso',
+                      price: 'RP 25.00',
+                    ),
+                    Home(
+                      dess: '',
+                      img: '',
+                      name: '',
+                      price: '',
+                    ),
+                    Home(
+                      dess: '',
+                      img: '',
+                      name: '',
+                      price: '',
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Text(
+              'Special For you',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 20),
+            ),
           ],
         ),
       ),
-      //bottomNavigationBar: MySta(),
+      bottomNavigationBar: MySta(),
     );
   }
 }

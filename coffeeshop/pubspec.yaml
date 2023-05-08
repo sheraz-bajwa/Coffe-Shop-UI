@@ -74,6 +74,7 @@ flutter:
   assets:
   - assets/WhatsApp Image 2023-04-22 at 11.09.57 PM.jpeg
   - assets/cofe.jpg
+  - assets/espresso.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
