@@ -46,6 +46,7 @@ dependencies:
   http: ^0.13.5
   geolocator: ^9.0.2
   baseflow_plugin_template: ^2.1.1
+  curved_navigation_bar: ^1.0.3
   
 dev_dependencies:
   flutter_test:
@@ -72,6 +73,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
   - assets/WhatsApp Image 2023-04-22 at 11.09.57 PM.jpeg
+  - assets/cofe.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

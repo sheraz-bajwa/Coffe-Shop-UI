@@ -1,3 +1,4 @@
+import 'package:coffeeshop/bottom.dart';
 import 'package:coffeeshop/card.dart';
 import 'package:flutter/material.dart';
 
@@ -87,6 +88,7 @@ class Coffee extends StatelessWidget {
                       return null;
                     },
                   ),
+                  ListView(),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                     child: SingleChildScrollView(
@@ -94,10 +96,10 @@ class Coffee extends StatelessWidget {
                       child: Row(
                         children: [
                           Home(
-                            dess: '',
-                            img: '',
-                            name: '',
-                            price: '',
+                            dess: 'with plane sugar',
+                            img: 'assets/cofe.jpg',
+                            name: 'Capucino',
+                            price: 'RP 20,000',
                           ),
                           Home(
                             dess: '',
@@ -127,6 +129,7 @@ class Coffee extends StatelessWidget {
           ],
         ),
       ),
+      //bottomNavigationBar: MySta(),
     );
   }
 }

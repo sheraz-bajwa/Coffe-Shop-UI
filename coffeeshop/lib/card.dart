@@ -15,7 +15,8 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(margin: EdgeInsets.all(10),
+    return Container(
+      margin: EdgeInsets.all(10),
       decoration: BoxDecoration(
           color: Color.fromARGB(255, 31, 37, 44),
           borderRadius: BorderRadius.circular(20)),
@@ -31,7 +32,7 @@ class Home extends StatelessWidget {
                 flex: 3,
                 child: Container(
                   decoration:
-                      BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                      BoxDecoration(borderRadius: BorderRadius.circular(40)),
                   height: 100,
                   width: 150,
                   child: Image.asset(
@@ -39,6 +40,9 @@ class Home extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 )),
+            SizedBox(
+              height: 10,
+            ),
             Expanded(
                 //flex: 2,
                 child: Column(
@@ -68,7 +72,7 @@ class Home extends StatelessWidget {
                 Text(
                   price,
                   style: TextStyle(
-                      color: Colors.white,
+                      color: Color.fromARGB(255, 198, 127, 81),
                       fontWeight: FontWeight.w500,
                       fontSize: 17),
                 ),
