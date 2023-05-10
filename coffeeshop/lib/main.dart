@@ -1,5 +1,4 @@
 import 'package:coffeeshop/coffee.dart';
-import 'package:coffeeshop/landing.dart';
 import 'package:flutter/material.dart';
 import 'package:coffeeshop/card.dart';
 
